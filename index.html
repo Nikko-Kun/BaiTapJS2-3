@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>BaiTapJS2-3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="accordion" id="accordionExample">
+ <!-- BÀI 1: TÍNH TIỀN LƯƠNG NHÂN VIÊN -->
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            TÍNH TIỀN LƯƠNG NHÂN VIÊN
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card card-body">
+                        <div class="container">
+                            <form class="w-75 py-1">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                
+                                        <input type="number" class="form-control" id="luong1Ngay" placeholder="Nhập lương 1 ngày"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                     
+                                        <input type="number" class="form-control" id="soNgayLam" placeholder="Nhập số ngày làm"
+                                            min='0'>
+                                    </div>
+                                    
+                                </div>
+                                <button type="button" class="btn btn-primary" id="btnCalc1">Tính lương</button>
+                                <div class="pt-3">
+                                    <p class="alert alert-danger" id="result1"></p>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- BÀI 2: TÍNH GIÁ TRỊ TRUNG BÌNH -->            
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            TÍNH GIÁ TRỊ TRUNG BÌNH
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">                        
+                        <div class="container">
+                            <form class="w-75 py-1">
+                                <div class="form-row">
+                                    
+                                    <div class="form-group col-md-4">                
+                                        <input type="number" class="form-control" id="soThu1" placeholder="Nhập số thứ 1"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">                                     
+                                        <input type="number" class="form-control" id="soThu2" placeholder="Nhập số thứ 2"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">                
+                                        <input type="number" class="form-control" id="soThu3" placeholder="Nhập số thứ 3"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">                                     
+                                        <input type="number" class="form-control" id="soThu4" placeholder="Nhập số thứ 4"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">                
+                                        <input type="number" class="form-control" id="soThu5" placeholder="Nhập số thứ 5"
+                                            min='0'>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary" id="btnCalc2">Tính trung bình</button>
+                                <div class="pt-3">
+                                    <p class="alert alert-danger" id="result2"></p>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- BÀI 3: QUY ĐỔI TIỀN -->
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            QUY ĐỔI TIỀN
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card card-body">
+                        
+                        <div class="container">
+                            <form class="w-75 py-1">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                
+                                        <input type="number" class="form-control" id="tienUSD" placeholder="Nhập số tiền USD"
+                                            min='0'>
+                                    </div>                            
+                                </div>
+                                <button type="button" class="btn btn-primary" id="btnCalc3">Quy đổi tiền</button>
+                                <div class="pt-3">
+                                    <p class="alert alert-danger" id="result3"></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- BÀI 4: TÍNH CHU VI, DIỆN TÍCH HÌNH CHỮ NHẬT -->            
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            TÍNH CHU VI, DIỆN TÍCH HÌNH CHỮ NHẬT
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card card-body">                        
+                        <div class="container">
+                            <form class="w-75 py-1">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">                
+                                        <input type="number" class="form-control" id="chieuDai" placeholder="Nhập chiều dài"
+                                            min='0'>
+                                    </div>
+                                    <div class="form-group col-md-4">                                     
+                                        <input type="number" class="form-control" id="chieuRong" placeholder="Nhập chiều rộng"
+                                            min='0'>
+                                    </div>                                    
+                                </div>
+                                <button type="button" class="btn btn-primary" id="btnCalc4">Tính chu vi</button>
+                                <div class="pt-3">
+                                    <p class="alert alert-danger" id="result4"></p>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- BÀI 5: TÍNH TỔNG 2 KÝ SỐ -->
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            TÍNH TỔNG 2 KÝ SỐ
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card card-body">
+                        
+                        <div class="container">
+                            <form class="w-75 py-1">
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                
+                                        <input type="number" class="form-control" id="nhapSo2ChuSo" placeholder="Nhập số có 2 chữ số"
+                                            min='0'>
+                                    </div>                            
+                                </div>
+                                <button type="button" class="btn btn-primary" id="btnCalc5">Tính tổng</button>
+                                <div class="pt-3">
+                                    <p class="alert alert-danger" id="result5"></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+        <!-- JS Code -->
+        <script src="./js/tinhLuong.js"></script>
+        <script src="./js/tinhGiaTriTrungBinh.js"></script>
+        <script src="./js/quyDoiTien.js"></script>
+        <script src="./js/tinhChuVi.js"></script>
+        <script src="./js/tong2KySo.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
